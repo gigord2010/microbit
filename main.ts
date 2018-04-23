@@ -64,9 +64,9 @@ namespace sensors {
 
     //% blockId=sensor_ping block="gigo ultrasonic trig %trig|echo %echo|get distance %unit"
     //% trig.fieldEditor="gridpicker" trig.fieldOptions.columns=4
-    //% trig.fieldOptions.tooltips="false" trig.fieldOptions.width="300"
+    //% trig.fieldOptions.tooltips="false" trig.fieldOptions.width="350"
     //% echo.fieldEditor="gridpicker" echo.fieldOptions.columns=4
-    //% echo.fieldOptions.tooltips="false" echo.fieldOptions.width="300"
+    //% echo.fieldOptions.tooltips="false" echo.fieldOptions.width="350"
     export function sensor_ping(trig: DigitalPin, echo: DigitalPin, unit: PingUnit, maxCmDistance = 500): number {
         // send pulse
         pins.setPull(trig, PinPullMode.PullNone);
