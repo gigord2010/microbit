@@ -63,9 +63,9 @@ namespace sensors {
     }
 
     //% blockId=sensor_ping block=" ultrasonic trig %trig|echo %echo|get distance %unit"
-    //% trig.fieldEditor="gridpicker" trig.fieldOptions.columns=4
+    //% trig.fieldEditor="gridpicker" trig.fieldOptions.columns=5
     //% trig.fieldOptions.tooltips="false" trig.fieldOptions.width="350"
-    //% echo.fieldEditor="gridpicker" echo.fieldOptions.columns=4
+    //% echo.fieldEditor="gridpicker" echo.fieldOptions.columns=5
     //% echo.fieldOptions.tooltips="false" echo.fieldOptions.width="350"
     export function sensor_ping(trig: DigitalPin, echo: DigitalPin, unit: PingUnit, maxCmDistance = 500): number {
         // send pulse
