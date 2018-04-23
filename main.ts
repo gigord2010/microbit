@@ -62,7 +62,7 @@ namespace sensors {
         MicroSeconds
     }
 
-    //% blockId=sensor_ping block="gigo ultrasonic trig %trig|echo %echo|get distance %unit"
+    //% blockId=sensor_ping block=" ultrasonic trig %trig|echo %echo|get distance %unit"
     //% trig.fieldEditor="gridpicker" trig.fieldOptions.columns=4
     //% trig.fieldOptions.tooltips="false" trig.fieldOptions.width="300"
     //% echo.fieldEditor="gridpicker" echo.fieldOptions.columns=4
