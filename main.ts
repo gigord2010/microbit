@@ -62,11 +62,11 @@ namespace sensors {
         MicroSeconds
     }
 
-    //% blockId=sensor_ping block=" ultrasonic trig %trig|echo %echo|get distance %unit"
-    //% trig.fieldEditor="gridpicker" trig.fieldOptions.columns=5
-    //% trig.fieldOptions.tooltips="false" trig.fieldOptions.width="350"
-    //% echo.fieldEditor="gridpicker" echo.fieldOptions.columns=5
-    //% echo.fieldOptions.tooltips="false" echo.fieldOptions.width="350"
+    //% blockId=sensor_ping block="ultrasonic trig %trig|echo %echo|get distance %unit"
+    //% trig.fieldEditor="gridpicker" trig.fieldOptions.columns=4
+    //% trig.fieldOptions.tooltips="false" trig.fieldOptions.width="300"
+    //% echo.fieldEditor="gridpicker" echo.fieldOptions.columns=4
+    //% echo.fieldOptions.tooltips="false" echo.fieldOptions.width="300"
     export function sensor_ping(trig: DigitalPin, echo: DigitalPin, unit: PingUnit, maxCmDistance = 500): number {
         // send pulse
         pins.setPull(trig, PinPullMode.PullNone);
@@ -98,4 +98,18 @@ namespace sensors {
         pins.analogWritePin(GreenPin, pins.map(GreenValue, 0, 255, 0, 1023));
         pins.analogWritePin(BluePin, pins.map(BlueValue, 0, 255, 0, 1023));
     }
+	//% blockId=DDMmotor block="Mcontrol pin %McontrolPin|speed of Mcontrol(0~1) %McontrolValue|MSpeed pin %MSpeedPin|speed of MSpeed(0~255) %MSpeedValue" blockExternalInputs=false
+    //% McontrolValue.min=0 McontrolValue.max=1 MSpeedValue.min=0 MSpeed.max=255
+    //% McontrolPin.fieldEditor="gridpicker" McontrolPin.fieldOptions.columns=4
+    //% McontrolPin.fieldOptions.tooltips="false" McontrolPin.fieldOptions.width="300"
+	//% MSpeedPin.fieldEditor="gridpicker" MSpeedPin.fieldOptions.columns=4
+    //% MSpeedPin.fieldOptions.tooltips="false" MSpeedPin.fieldOptions.width="300"
+    
+    export function DDMmotor(McontrolPin: AnalogPin,McontrolValue: number,MSpeedPin: AnalogPin,MSpeedValue: number): void {
+        pins.analogWritePin(McontrolPin, pins.map(McontrolValue, 0, 1, 0, 1023));
+        pins.analogWritePin(MSpeedPin, pins.map(MSpeedValue, 0, 255, 0, 1023));
+	   
+
+    }
+	
 }
