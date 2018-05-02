@@ -9,4 +9,6 @@
     "sensors.Dht11Result.Fahrenheit|block": "華氏溫度",
     "sensors.Dht11Result.humidity|block": "濕度",
     "sensors.RGBLight|block": "共陰極RGB LED 設定 紅色腳位 %RedPin|綠色腳位 %GreenPin|藍色腳位 %BluePin|紅色值(0~255) %RedValue|綠色值(0~255) %GreenValue|藍色值(0~255) %BlueValue"
+	"sensors.DDMmotor block": "DDM馬達 正反轉腳位 %McontrolPin|正反轉控制(0~1) %McontrolValue|DDM馬達 速度腳位 %MSpeedPin|速度調整(0~255) %MSpeedValue"
 }
+ 
