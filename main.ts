@@ -98,7 +98,7 @@ namespace sensors {
         pins.analogWritePin(GreenPin, pins.map(GreenValue, 0, 255, 0, 1023));
         pins.analogWritePin(BluePin, pins.map(BlueValue, 0, 255, 0, 1023));
     }
-	//% blockId=DDMmotor block="Mcontrol pin %McontrolPin|speed of Mcontrol(0~1) %McontrolValue|MSpeed pin %MSpeedPin|speed of MSpeed(0~255) %MSpeedValue" blockExternalInputs=false
+	//% blockId=DDMmotor block="Mcontrol pin %McontrolPin|direction of Mcontrol(0~1) %McontrolValue|MSpeed pin %MSpeedPin|speed of MSpeed(0~255) %MSpeedValue" blockExternalInputs=false
     //% McontrolValue.min=0 McontrolValue.max=1 MSpeedValue.min=0 MSpeed.max=255
     //% McontrolPin.fieldEditor="gridpicker" McontrolPin.fieldOptions.columns=4
     //% McontrolPin.fieldOptions.tooltips="false" McontrolPin.fieldOptions.width="300"
