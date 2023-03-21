@@ -12,5 +12,5 @@ Blocks provided by Gigo。
 
 
 ```package
-sensors=github:gigord2010/microbit
+sensors=github:gigord2010/pxt-sensor
 ```
